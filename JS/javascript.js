@@ -111,9 +111,9 @@ function showSunset(info) {
   //Display the sunset information of selected town, date and time
   var display =
     "Sun rise on " +
-    localDateRise.toLocaleString("en-NZ") +
+    localDateRise.toLocaleTimeString("en-NZ") +
     " and set on " +
-    localDateSet.toLocaleString("en-NZ");
+    localDateSet.toLocaleTimeString("en-NZ");
   document.getElementById("sunset").innerHTML = display;
 }
 
