@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Dynamic Map</h1>
+          <h2 class="subtitle">New Zealand Tourist Information</h2>
+        </div>
+      </div>
+    </section>
+    <!--Links to stylesheet, javascript file and leaflet API stylesheet-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="../CSS/stylesheet.css" />
+    <script type="text/javascript" src="../JS/javascript.js"></script>
+  </head>
+  <body>
+    <!--Colletion of divs for updating relevant information from javascript file-->
+    <div id="main" class="container is-fullwidth">
+      <div class="section">
+        <div class="columns">
+          <div class="column">
+            <article class="media">
+              <figure
+                class="media-left"
+                id="mapid"
+                style="height: 400px; width: 100%;"
+              ></figure>
+            </article>
+          </div>
+          <div class="column">
+            <div class="field">
+				<label class="label">Which town would you like to visit?</p>
+				<div class="control">
+				<input class="input" type="text" name="town" id="townValue" />
+				</div>
+			</div>
+			<div class="field">
+				<div class="control">
+                <div class="button" value="Submit" onclick="fetchLocation()">
+                  Submit
+				</div>
+				</div>
+			</div>
+              <div class="container">
+                <label class="label">
+				  <p>Recent Searches:</p>
+				  <span class="select">
+					<select class="label" id="recent">
+				  	
+					</select>
+				 </span>
+				</label>
+				<div class="control is-readonly">
+					<div class="textarea">
+						<option id="weather"></option>
+						<br>
+						<option id="sunset"></option>
+					</div>
+				</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Calling leaflet js script at the end of HTML file-->
+    <script
+      src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""
+    ></script>
+  </body>
+</html>

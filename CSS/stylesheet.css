@@ -1,0 +1,27 @@
+@import "bulma";
+body {
+  background-color: #00ffc8;
+  margin: 0px;
+}
+/* basic css to use without bulma */
+/* #mapid {
+  margin: 1%;
+  width: 30%;
+  height: 500px;
+  float: left;
+  border: 5px solid white;
+} */
+/* #search {
+  width: 50%;
+  float: left;
+}
+#recent {
+  width: 50%;
+  float: left;
+} */
+/* #sunset,
+#weather {
+  margin: 1%;
+  width: 30%;
+  float: center;
+} */
